@@ -1,6 +1,7 @@
 # basic_line
 
-Draws a line, square and points
+Draws a line, square and points.
+This example uses CustomPaint widget that also test rendering points a necessary step for rasterizing triangles.
 
 Created using:
 ```sh

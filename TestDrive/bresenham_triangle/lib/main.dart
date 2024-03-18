@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Canvas Basic line Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
       home: const BasicExample(),
@@ -34,11 +34,11 @@ class BasicExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: DemoPainter(Colors.lime),
+      painter: DemoPainter(Colors.blue),
       // child: const SizedBox.square(
       //   dimension: 200.0,
       // ),
-      child: const SizedBox.expand(),
+      size: const Size(100, 100),
       // For painting on foreground
       // foregroundPainter: DemoPainter(),
     );
@@ -51,7 +51,7 @@ class DemoPainter extends CustomPainter {
   DemoPainter(this.rectColor);
 
   var rect = Rect.fromCenter(
-    center: const Offset(250.0, 250.0),
+    center: const Offset(100.0, 100.0),
     width: 200,
     height: 200,
   );
@@ -68,21 +68,6 @@ class DemoPainter extends CustomPainter {
       const Offset(10.0, 50.0),
       const Offset(100.0, 10.0),
       Paint()..color = Colors.deepOrange,
-    );
-
-    var vertices = Vertices(VertexMode.triangleStrip, [
-      const Offset(100, 100),
-      const Offset(200, 100),
-      const Offset(350, 300),
-      const Offset(400, 100),
-      const Offset(500, 300),
-      const Offset(700, 200),
-    ]);
-
-    canvas.drawVertices(
-      vertices,
-      BlendMode.plus,
-      Paint()..color = Colors.blue[400]!,
     );
 
     canvas.drawPoints(

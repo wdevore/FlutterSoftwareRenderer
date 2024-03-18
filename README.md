@@ -18,6 +18,7 @@ The application is built in various stages:
 - https://www.kodeco.com/26483389-flutter-canvas-api-getting-started
 - https://api.flutter.dev/flutter/dart-ui/dart-ui-library.html
 - https://getstream.io/blog/definitive-flutter-painting-guide/ in depth
+- https://www.youtube.com/watch?v=pD38Yyz7N2E filip Hracek in depth
 
 # Create
 ```sh
